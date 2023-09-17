@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Previsão de Compra</title>
+</head>
+
+<body>
+    <h1>Previsão de Compra</h1>
+    <form id="prediction-form" method="POST">
+        <label for="idade">Idade:</label>
+        <input type="text" id="idade" name="idade"><br><br>
+
+        <label for="pontuacao">Pontuação:</label>
+        <input type="text" id="pontuacao" name="pontuacao"><br><br>
+
+        <button type="submit" name="model" value="random_forest">Prever (Random Forest)</button>
+        <p>Previsão (Random Forest): <span>{{ rf_prediction }}</span></p>
+
+        <button type="submit" name="model" value="decision_tree">Prever (Árvore de Decisão)</button>
+        <p>Previsão (Árvore de Decisão): <span>{{ tree_prediction }}</span></p>
+    </form>
+</body>
+
+</html>
